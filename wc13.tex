@@ -1,0 +1,61 @@
+\documentclass[a4paper, addpoints]{exam}
+
+\usepackage{amsfonts,amsmath,amsthm}
+\usepackage{framed}
+\usepackage[a4paper]{geometry}
+
+\header{CS/MATH 113}{WC13: Structural Induction}{Spring 2024}
+\footer{}{Page \thepage\ of \numpages}{}
+\runningheadrule
+\runningfootrule
+
+\printanswers
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{claim}
+\newtheorem{claim}{Claim}
+
+\title{Weekly Challenge 13: Structural Induction}
+\author{CS/MATH 113 Discrete Mathematics}
+\date{Spring 2024}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+\titledquestion{$k$-ary tree}[10]
+  Definition 5 in Section 5.3 of our textbook defines a \textit{full binary tree}. We extend this definition to a \textit{full $k$-ary tree} as follows.
+  \begin{framed}
+    \begin{definition}[Full $k$-ary tree]$\null$
+      
+      \underline{Basis Step} There is a full $k$-ary tree consisting only of a single vertex $r$.
+      
+      \underline{Recursive Step}  If $T_1,T_2, T_3,\ldots,T_k$ are disjoint full $k$-ary trees, there is a full $k$-ary tree, denoted by $T_1\cdot T_2\cdot T_3\cdot\ldots\cdot T_k$, consisting of a root $r$ together with edges connecting the root to each of the roots of $T_1,T_2, T_3,\ldots,T_k$.
+    \end{definition}
+  \end{framed}
+  We also introduce the following definitions of nodes in a tree.
+  \begin{definition}[Leaf node]
+    A leaf node in a tree is a node that has no children.
+  \end{definition}
+  \begin{definition}[Internal node]
+    An internal node in a tree is a node that is not a leaf node.
+  \end{definition}
+
+  Use structural induction to prove the following claim.
+  \begin{claim}
+    The number of internal nodes in a full $k$-ary tree with $n$ leaves is $\frac{n-1}{k-1}$.
+  \end{claim}
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+\end{questions}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

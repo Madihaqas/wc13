@@ -50,7 +50,17 @@
     The number of internal nodes in a full $k$-ary tree with $n$ leaves is $\frac{n-1}{k-1}$.
   \end{claim}
   \begin{solution}
-    % Enter your solution here.
+    
+    Basis step:\\
+    For a full k-ary tree with a single vertex, $\frac{n-1}{k-1}$,\\
+    $\frac{1-1}{1-1}$ = 0 which is true as there are no internal nodes present in a k-ary tree with a single leaf.\\
+    Recursive step:\\
+    Each disjoint Tree $T_1,T_2, T_3,\ldots,T_k$ from the same root r has $\frac{n-1}{k-1}$ internal nodes.\\
+    $\frac{n-1}{k_1-1}$, $\frac{n-1}{k_2-1}$, $\frac{n-1}{k_3-1}$, $\dots$, $\frac{n-1}{k-1}$.\\
+    Writing in summation form: $\sum_{i=1}^{k} a_i = \frac{k_1 - 1}{n-1} + \frac{k_2 - 1}{n-1} + \frac{k_3 - 1}{n-1} + \dots + \frac{k-1}{n-1}$ which completes the recursive step.\\
+    The root r of the disjoint tree is also an internal node, so adding 1 in the formula above,\\
+    $\sum_{i=1}^{k} a_i + 1$ will give the number of internal node in a full k-ary tree.
+
   \end{solution}
 \end{questions}
 
